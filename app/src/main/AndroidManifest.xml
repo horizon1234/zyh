@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zyh.zyh_project_01">
 
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"

@@ -2,7 +2,9 @@ package com.example.zyh.zyh_project_01.application;
 
 import android.app.Application;
 
+import com.example.zyh.zyh_project_01.data.db.manager.DaoManager;
 import com.example.zyh.zyh_project_01.utils.LogUtil;
+import com.example.zyhh.green.gen.DaoSession;
 import com.orhanobut.hawk.Hawk;
 
 /**
@@ -23,5 +25,8 @@ public class MyApplication extends Application {
         //Hawk初始化
         Hawk.init(this).build();
         LogUtil.init(LogUtil.VERBOSE,LogUtil.TAG );
+        DaoManager.getInstance(this.getApplicationContext());
+        DaoSession s = DaoManager.getInstance(this.getApplicationContext()).getDaoSession();
+        s.getComicDao();
     }
 }
