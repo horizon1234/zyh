@@ -33,4 +33,11 @@ public class DisplayUtil {
         float density = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * density + 0.5f);
     }
+
+    public static int getScreenHeight(Context context){
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics out = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(out);
+        return out.heightPixels;
+    }
 }

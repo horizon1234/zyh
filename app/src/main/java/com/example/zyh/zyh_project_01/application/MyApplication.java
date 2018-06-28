@@ -26,7 +26,5 @@ public class MyApplication extends Application {
         Hawk.init(this).build();
         LogUtil.init(LogUtil.VERBOSE,LogUtil.TAG );
         DaoManager.getInstance(this.getApplicationContext());
-        DaoSession s = DaoManager.getInstance(this.getApplicationContext()).getDaoSession();
-        s.getComicDao();
     }
 }

@@ -66,4 +66,21 @@ public class ZToast {
             mToast.showToast(times);
         }
     }
+
+    private boolean isShowToast(){
+        if(mToast == null){
+            return false;
+        }
+        return  mToast.isShow();
+    }
+
+    public static boolean isShow(){
+        if(mToastInstance == null){
+            return false;
+        }else{
+            boolean isShow = mToastInstance.isShowToast();
+            mToastInstance = null;
+            return isShow;
+        }
+    }
 }
