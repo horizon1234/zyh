@@ -43,7 +43,7 @@ public class ZElasticRefreshScrollView extends ScrollView {
     public static final int SCROLL_TO_DOWN = 2;
     int oldY = 0;
 
-    private interface RefreshListener{
+    public interface RefreshListener{
         void onActionDown();
         void onActionUp();
         void onRefresh();

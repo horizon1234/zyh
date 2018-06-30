@@ -6,4 +6,10 @@
     <color name="white">#ffffff</color>
     <color name="colorBottom">#e2e2e2</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorBgDark">#f4f4f4</color>
+    <color name="colorTextColor">#666666</color>
+    <color name="colorTextLight">#d1d1d1</color>
+    <color name="colorTextBlack">#666666</color>
+    <color name="colorTextColorLight">#999999</color>
+    <color name="colorTextColorLight2">#c4c5c6</color>
 </resources>
