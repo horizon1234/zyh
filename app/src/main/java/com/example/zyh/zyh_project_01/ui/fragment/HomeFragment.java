@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.zyh.zyh_project_01.MainActivity;
 import com.example.zyh.zyh_project_01.R;
+import com.example.zyh.zyh_project_01.data.commons.Constants;
 import com.example.zyh.zyh_project_01.data.db.Comic;
 import com.example.zyh.zyh_project_01.ui.adapter.MainAdapter;
 import com.example.zyh.zyh_project_01.ui.presenter.HomePresenter;
@@ -26,6 +27,7 @@ import com.youth.banner.BannerConfig;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by zyh on 2018/6/15.
@@ -65,7 +67,7 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements IHomeVi
 
     @Override
     protected void initPresenter() {
-        mPresenter = new HomePresenter();
+        mPresenter = new HomePresenter(getActivity(),this);
     }
 
     @Override
@@ -183,7 +185,35 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements IHomeVi
     @Override
     public void onTitleClick(RecyclerView parent, View view, int type) {
         switch (type){
+            case Constants.TYPE_RANK_LIST:
+                break;
+            case Constants.TYPE_RECOMMEND:
+                ShowToast("更多热门推荐开发中");
+                break;
+            case Constants.TYPE_GIRL_RANK:
+                break;
+            case Constants.TYPE_BOY_RANK:
+                break;
+            case Constants.TYPE_HOT_SERIAL:
+                break;
+            case Constants.TYPE_HOT_JAPAN:
+                break;
+            default:
+                ShowToast("开发中");
+                break;
 
         }
     }
+
+    @OnClick(R.id.iv_error)
+    public void ReloadData(View view){
+        mErrorView.setVisibility(View.GONE);
+    }
+
+    @OnClick(R.id.iv_search)
+    public void ToSearch(){
+
+    }
+
+
 }
